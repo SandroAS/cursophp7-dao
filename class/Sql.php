@@ -14,7 +14,7 @@ class Sql extends PDO {
 
         foreach ($parameters as $key => $value) {
 
-            $this->setParam($key, $value);
+            $this->setParam($statment, $key, $value);
 
         }
 
@@ -26,7 +26,7 @@ class Sql extends PDO {
 
     }
 
-    public function query($rawQuery, $params = array()):mixed{
+    public function query($rawQuery, $params = array()){
 
         $stmt = $this->conn->prepare($rawQuery);
 
