@@ -1,8 +1,8 @@
 <?php
 
-class Usuario {
+class Usuario{
 
-    private $idusuarios;
+    private $idusuario;
     private $deslogin;
     private $dessenha;
     private $dtcadastro;
@@ -71,11 +71,10 @@ class Usuario {
     public function __toString(){
 
         return json_encode(array(
-            "idusuario"=>$this->getIdusuarios(),
+            "idusuario"=>$this->getIdusuario(),
             "deslogin"=>$this->getDeslogin(),
             "dessenha"=>$this->getDessenha(),
             "dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
-
         ));
     }
 }
